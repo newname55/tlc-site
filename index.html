@@ -142,13 +142,6 @@
       padding: 72px 0 56px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 36px;
-      align-items: center;
-    }
-
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -162,44 +155,11 @@
       margin-bottom: 18px;
     }
 
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.18;
-      margin: 0 0 18px;
-      letter-spacing: .01em;
-    }
-
-    .hero-lead {
-      font-size: 17px;
-      color: rgba(255,255,255,0.92);
-      margin: 0 0 24px;
-      max-width: 760px;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 12px;
-      margin: 0 0 28px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .hero-points li {
-      padding: 12px 14px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      font-size: 14px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.92);
-    }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-top: 28px;
     }
 
     .btn {
@@ -227,74 +187,6 @@
     }
 
     .btn:hover { transform: translateY(-1px); }
-
-    .hero-note {
-      font-size: 13px;
-      color: rgba(255,255,255,.82);
-    }
-
-    .hero-visual {
-      position: relative;
-      overflow: hidden;
-      min-height: 100%;
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(0,0,0,.22);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .hero-visual img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .hero-visual::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background:
-        linear-gradient(180deg, rgba(8, 14, 26, 0.02) 0%, rgba(8, 14, 26, 0.10) 42%, rgba(8, 14, 26, 0.72) 100%);
-    }
-
-    .hero-visual::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: linear-gradient(180deg, rgba(200,155,60,0.00) 0%, rgba(200,155,60,0.00) 58%, rgba(200,155,60,0.12) 100%);
-    }
-
-    .hero-caption {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      z-index: 3;
-      padding: 18px 20px;
-      border-radius: 18px;
-      background: rgba(11, 18, 33, 0.92);
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 12px 28px rgba(0,0,0,.24);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-caption strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 16px;
-      color: #fff;
-      line-height: 1.45;
-    }
-
-    .hero-caption p {
-      margin: 0;
-      color: rgba(255,255,255,0.90);
-      font-size: 14px;
-      line-height: 1.7;
-    }
 
     .section {
       padding: 76px 0;
@@ -548,7 +440,6 @@
     }
 
     @media (max-width: 1024px) {
-      .hero-grid,
       .contact-grid,
       .reason-grid,
       .flow-grid,
@@ -567,7 +458,6 @@
         justify-content: flex-end;
       }
 
-      .hero-grid,
       .problem-grid,
       .service-grid,
       .reason-grid,
@@ -579,10 +469,6 @@
 
       .hero {
         padding-top: 48px;
-      }
-
-      .hero-points {
-        grid-template-columns: 1fr;
       }
 
       .brand-ja {
@@ -598,16 +484,6 @@
         padding: 20px;
       }
 
-      .hero-visual img {
-        min-height: 360px;
-      }
-
-      .hero-caption {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
-        padding: 14px 16px;
-      }
     }
   </style>
 </head>
@@ -632,39 +508,25 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">岡山対応 / 外国人ビザ / 深夜営業届 / 風営法許可</div>
-          <h1>岡山で外国人ビザ・深夜営業届・風営法許可なら<br>TLC行政書士事務所</h1>
-          <p class="hero-lead">
-            外国人の在留資格手続きから、深夜営業届、風営法許可、外国人雇用の実務相談まで。
-            何をすべきか分からない段階でも、手続きの全体像を整理しながら、わかりやすくサポートします。
-          </p>
-
-          <ul class="hero-points">
-            <li>岡山エリアで相談しやすい体制</li>
-            <li>外国人雇用・在留資格に対応</li>
-            <li>バー・スナック・キャバクラ等の手続き相談に対応</li>
-            <li>LINE・フォームから相談可能</li>
-          </ul>
-
-          <div class="hero-actions">
-            <a href="https://line.me/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
-            <a href="#contact" class="btn btn-secondary">無料相談はこちら</a>
+      <div class="container">
+        <div class="hero-visual-main">
+          <div class="hero-media">
+            <img src="assets/img/hero.jpg" alt="岡山を背景に、外国人ビザとナイトビジネス許認可に対応するTLC行政書士事務所のイメージ画像" />
           </div>
-
-          <div class="hero-note">
-            初回は「何の手続きが必要か分からない」という状態からでもご相談いただけます。
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="eyebrow">岡山対応 / 外国人ビザ / 深夜営業届 / 風営法許可</div>
+            <h1>岡山で外国人ビザ・深夜営業届・風営法許可なら<br>TLC行政書士事務所</h1>
+            <p class="hero-lead">
+              外国人の在留資格手続きから、深夜営業届、風営法許可、外国人雇用の実務相談まで。
+              何をすべきか分からない段階でも、手続きの全体像を整理しながら、わかりやすくサポートします。
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
+              <a href="#services" class="btn btn-secondary">サービスを見る</a>
+            </div>
           </div>
         </div>
-
-        <aside class="hero-visual" aria-label="TLC行政書士事務所のトップビジュアル">
-          <img src="assets/img/topimg.png" alt="岡山を背景に、外国人ビザとナイトビジネス許認可に対応するTLC行政書士事務所のイメージ画像" />
-          <div class="hero-caption">
-            <strong>岡山で、外国人ビザとナイトビジネス許認可を一括サポート</strong>
-            <p>外国人雇用、深夜営業届、風営法許可まで、相談しやすい導線としてトップに配置しています。</p>
-          </div>
-        </aside>
       </div>
     </section>
 
