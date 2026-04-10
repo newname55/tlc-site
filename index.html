@@ -107,6 +107,7 @@
       font-size: 20px;
       font-weight: 800;
       letter-spacing: .02em;
+      white-space: nowrap;
     }
 
     .nav {
@@ -484,11 +485,31 @@
       }
 
       .brand-ja {
-        font-size: 17px;
+        font-size: 15px;
       }
 
       .brand-en {
         font-size: 11px;
+      }
+
+      .brand {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+
+      .nav {
+        gap: 8px;
+      }
+
+      .lang-switch a {
+        min-height: 30px;
+        padding: 0 8px;
+        font-size: 11px;
+      }
+
+      .nav-cta {
+        padding: 10px 12px;
+        font-size: 12px;
       }
 
       .cta-box,
