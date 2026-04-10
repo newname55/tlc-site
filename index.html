@@ -232,39 +232,54 @@
       color: rgba(255,255,255,.72);
     }
 
-    .hero-card {
-      background: rgba(255,255,255,0.98);
-      color: var(--text);
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
       border-radius: 24px;
-      padding: 26px;
       box-shadow: 0 18px 45px rgba(0,0,0,.22);
+      background: rgba(255,255,255,0.04);
     }
 
-    .hero-card h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      line-height: 1.4;
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+      object-position: center;
     }
 
-    .hero-card ul {
-      margin: 0 0 20px;
-      padding-left: 18px;
-      color: var(--text-light);
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 14, 26, 0.04) 0%, rgba(8, 14, 26, 0.12) 40%, rgba(8, 14, 26, 0.58) 100%);
     }
 
-    .hero-card li + li { margin-top: 8px; }
-
-    .mini-contact {
-      display: grid;
-      gap: 10px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
+    .hero-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(14, 22, 38, 0.72);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(8px);
     }
 
-    .mini-contact strong {
-      font-size: 14px;
+    .hero-caption strong {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .hero-caption p {
+      margin: 0;
+      color: rgba(255,255,255,0.84);
+      font-size: 14px;
     }
 
     .section {
@@ -565,9 +580,19 @@
       }
 
       .cta-box,
-      .hero-card,
       .card {
         padding: 20px;
+      }
+
+      .hero-visual img {
+        min-height: 360px;
+      }
+
+      .hero-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 14px 16px;
       }
     }
   </style>
@@ -619,24 +644,11 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="こんな方におすすめ">
-          <h2>こんなお悩みはありませんか？</h2>
-          <ul>
-            <li>外国人を採用したいが、就労できる在留資格か分からない</li>
-            <li>バーやスナックを始めたいが、深夜営業届が必要か知りたい</li>
-            <li>キャバクラ・ラウンジの許可区分や風営法の手続きが複雑で不安</li>
-            <li>岡山で相談しやすい行政書士を探している</li>
-          </ul>
-
-          <div class="mini-contact">
-            <div>
-              <strong>対応分野</strong>
-              <span>外国人ビザ申請 / 深夜営業届 / 風営法許可 / 外国人雇用</span>
-            </div>
-            <div>
-              <strong>相談方法</strong>
-              <span>LINE / お問い合わせフォーム / お電話</span>
-            </div>
+        <aside class="hero-visual" aria-label="TLC行政書士事務所のトップビジュアル">
+          <img src="assets/img/topimg.png" alt="岡山を背景に、外国人ビザとナイトビジネス許認可に対応するTLC行政書士事務所のイメージ画像" />
+          <div class="hero-caption">
+            <strong>岡山で、外国人ビザとナイトビジネス許認可を一括サポート</strong>
+            <p>外国人雇用、深夜営業届、風営法許可まで、相談しやすい導線としてトップに配置しています。</p>
           </div>
         </aside>
       </div>
