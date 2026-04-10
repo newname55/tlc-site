@@ -1,0 +1,41 @@
+html[lang="ur"] body {
+  font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", sans-serif;
+}
+
+html[lang="ur"] .brand,
+html[lang="ur"] .section-header,
+html[lang="ur"] .page-hero-box,
+html[lang="ur"] .detail-card,
+html[lang="ur"] .service-card,
+html[lang="ur"] .step-card,
+html[lang="ur"] .faq-question,
+html[lang="ur"] .faq-answer,
+html[lang="ur"] .contact-method,
+html[lang="ur"] .cta-box,
+html[lang="ur"] .hero-content {
+  text-align: right;
+}
+
+html[lang="ur"] .eyebrow,
+html[lang="ur"] .button-row,
+html[lang="ur"] .cta-points,
+html[lang="ur"] .footer-links,
+html[lang="ur"] .hero-actions,
+html[lang="ur"] .lang-switch {
+  flex-direction: row-reverse;
+}
+
+html[lang="ur"] .check-list li,
+html[lang="ur"] .panel-list li {
+  flex-direction: row-reverse;
+}
+
+html[lang="ur"] ul,
+html[lang="ur"] ol {
+  padding-left: 0;
+  padding-right: 1.2rem;
+}
+
+html[lang="ur"] .breadcrumbs {
+  flex-direction: row-reverse;
+}
